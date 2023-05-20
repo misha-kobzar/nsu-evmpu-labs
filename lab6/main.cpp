@@ -7,7 +7,7 @@ using namespace std;
 void print_device_info(libusb_device *device) 
 {
 	libusb_device_descriptor descriptor;
-	libusb_device_handle* handle = nullptr;
+	libusb_device_handle *handle = nullptr;
 
 	unsigned char message[200];
 	int descriptor_id = libusb_get_device_descriptor(device, &descriptor);
