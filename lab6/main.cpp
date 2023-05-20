@@ -31,9 +31,9 @@ void print_device_info(libusb_device *device)
 		if (descriptor.iSerialNumber) 
 		{
 			descriptor_id = libusb_get_string_descriptor_ascii(handle,
-															   descriptor.iSerialNumber,
-															   message, 
-															   sizeof(message));
+									   descriptor.iSerialNumber,
+									   message, 
+									   sizeof(message));
 
 			(descriptor_id > 0) ? printf("%s\n", message) : printf("Нет данных\n");
 		} 
@@ -47,9 +47,9 @@ void print_device_info(libusb_device *device)
 		if (descriptor.iManufacturer) 
 		{
 			descriptor_id = libusb_get_string_descriptor_ascii(handle,
-															   descriptor.iSerialNumber,
-															   message, 
-															   sizeof(message));
+									   descriptor.iSerialNumber,
+									   message, 
+									   sizeof(message));												   sizeof(message));
 
 			(descriptor_id > 0) ? printf("%s\n", message) : printf("Нет данных\n");
 		}
@@ -63,9 +63,9 @@ void print_device_info(libusb_device *device)
 		if (descriptor.iProduct)
 		{
 			descriptor_id = libusb_get_string_descriptor_ascii(handle,
-															   descriptor.iSerialNumber,
-															   message, 
-															   sizeof(message));
+									   descriptor.iSerialNumber,
+									   message, 
+									   sizeof(message));
 			
 			(descriptor_id > 0) ? printf("%s\n", message) : printf("Нет данных\n");
 		}
