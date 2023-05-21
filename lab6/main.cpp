@@ -49,7 +49,7 @@ void print_device_info(libusb_device *device)
 			descriptor_id = libusb_get_string_descriptor_ascii(handle,
 									   descriptor.iSerialNumber,
 									   message, 
-									   sizeof(message));												   sizeof(message));
+									   sizeof(message));
 
 			(descriptor_id > 0) ? printf("%s\n", message) : printf("Нет данных\n");
 		}
