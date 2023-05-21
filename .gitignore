@@ -1,4 +1,8 @@
 .idea/
 debug/
 release/
+gtest/
 debug_coverage/
+target/
+.DS_Store
+cmake-build-debug/
