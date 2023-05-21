@@ -8,11 +8,12 @@ int main()
 	double pi = 0.0;
 	double k = -1.0;
 
-	struct timespec start, end;
+    struct timespec start;
+    struct timespec end;
 
 	clock_gettime(CLOCK_MONOTONIC_RAW, &start);
 
-	for (int i = 0; i <= N; ++i) 
+	for (long i = 0; i <= N; ++i)
 	{
 		k *= -1;
 		pi += (4 * k) / (2 * i + 1);

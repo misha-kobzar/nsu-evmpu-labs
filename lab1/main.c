@@ -5,24 +5,24 @@
 
 int main()
 {
-	double pi = 0.0;
-	double k = -1.0;
+    double pi = 0.0;
+    double k = -1.0;
 
-	struct timespec start, end;
+    struct timespec start;
+    struct timespec end;
 
-	clock_gettime(CLOCK_MONOTONIC_RAW, &start);
+    clock_gettime(CLOCK_MONOTONIC_RAW, &start);
 
-	for (int i = 0; i <= N; ++i) 
-	{
-		k *= -1;
-		pi += (4 * k) / (2 * i + 1);
-	}
-	
-	clock_gettime(CLOCK_MONOTONIC_RAW, &end);
+    for (long i = 0; i <= N; ++i)
+    {
+        k *= -1;
+        pi += (4 * k) / (2 * i + 1);
+    }
 
-	printf("Time taken: %lf sec.\n", 
-		   end.tv_sec - start.tv_sec + 0.000000001 * (end.tv_nsec - start.tv_nsec));
+    clock_gettime(CLOCK_MONOTONIC_RAW, &end);
 
-	return 0;
+    printf("Time taken: %lf sec.\n",
+           end.tv_sec - start.tv_sec + 0.000000001 * (end.tv_nsec - start.tv_nsec));
+
+    return 0;
 }
-

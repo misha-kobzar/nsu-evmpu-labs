@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 #define N 6000000000
 
 int main()
@@ -7,9 +5,9 @@ int main()
 	double pi = 0.0;
 	double k = -1.0;
 
-	for (int i = 0; i <= N; ++i)
+	for (long i = 0; i <= N; i++)
 	{
-		k *= -1;
+		k *= -1.0;
 		pi += (4 * k) / (2 * i + 1);
 	}
 
